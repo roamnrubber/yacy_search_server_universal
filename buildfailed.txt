@@ -1,0 +1,458 @@
+Buildfile: /mnt/cloudparty/smoking/yacy_search_server_universal/build.xml
+
+clean:
+
+init:
+     [echo] YaCy Version number: 1.940
+     [echo] GIT Release Date: 20250108
+     [echo] GIT Release Time: 1001
+     [echo] GIT Release Hash: ddac0dbfe
+     [copy] Copying 1 file to /mnt/cloudparty/smoking/yacy_search_server_universal/defaults
+
+install-ivy:
+     [echo] downloading ivy (if not already there) to ${ify.download.file} ...
+      [get] Destination already exists (skipping): /mnt/cloudparty/smoking/yacy_search_server_universal/ivy/ivy.jar
+     [echo] using ivy.jar.file: /mnt/cloudparty/smoking/yacy_search_server_universal/ivy/ivy.jar
+
+resolve:
+[ivy:retrieve] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy/ ::
+[ivy:retrieve] :: loading settings :: url = jar:file:/mnt/cloudparty/smoking/yacy_search_server_universal/ivy/ivy.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[ivy:retrieve] :: resolving dependencies :: net.yacy#search-server;working@Satellite-Pro-L850
+[ivy:retrieve] 	confs: [compile]
+[ivy:retrieve] 	found commons-fileupload#commons-fileupload;1.4 in public
+[ivy:retrieve] 	found commons-lang#commons-lang;2.6 in public
+[ivy:retrieve] 	found com.cybozu.labs#langdetect;1.1-20120112 in public
+[ivy:retrieve] 	found com.drewnoakes#metadata-extractor;2.19.0 in public
+[ivy:retrieve] 	found com.adobe.xmp#xmpcore;6.1.11 in public
+[ivy:retrieve] 	found com.fasterxml.jackson.core#jackson-databind;2.18.2 in public
+[ivy:retrieve] 	found com.fasterxml.jackson.core#jackson-annotations;2.18.2 in public
+[ivy:retrieve] 	found com.fasterxml.jackson.core#jackson-core;2.18.2 in public
+[ivy:retrieve] 	found com.github.ben-manes.caffeine#caffeine;3.1.8 in public
+[ivy:retrieve] 	found org.checkerframework#checker-qual;3.37.0 in public
+[ivy:retrieve] 	found com.google.errorprone#error_prone_annotations;2.21.1 in public
+[ivy:retrieve] 	found com.google.guava#guava;33.3.1-jre in public
+[ivy:retrieve] 	found com.google.guava#failureaccess;1.0.2 in public
+[ivy:retrieve] 	found com.ibm.icu#icu4j;76.1 in public
+[ivy:retrieve] 	found com.github.mwiede#jsch;0.2.21 in public
+[ivy:retrieve] 	found com.twelvemonkeys.imageio#imageio-core;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.common#common-lang;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.common#common-io;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.common#common-image;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.imageio#imageio-bmp;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.imageio#imageio-tiff;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.imageio#imageio-metadata;3.12.0 in public
+[ivy:retrieve] 	found commons-codec#commons-codec;1.15 in public
+[ivy:retrieve] 	found commons-io#commons-io;2.17.0 in public
+[ivy:retrieve] 	found commons-logging#commons-logging;1.2 in public
+[ivy:retrieve] 	found io.dropwizard.metrics#metrics-core;3.2.2 in public
+[ivy:retrieve] 	found org.slf4j#slf4j-api;1.7.22 in public
+[ivy:retrieve] 	found io.dropwizard.metrics#metrics-jmx;4.1.5 in public
+[ivy:retrieve] 	found io.opentracing#opentracing-noop;0.33.0 in public
+[ivy:retrieve] 	found io.opentracing#opentracing-api;0.33.0 in public
+[ivy:retrieve] 	found io.opentracing#opentracing-util;0.33.0 in public
+[ivy:retrieve] 	found javax.servlet#javax.servlet-api;4.0.1 in public
+[ivy:retrieve] 	found javainetlocator#inetaddresslocator;2.18 in public
+[ivy:retrieve] 	found jcifs#jcifs;1.3.17 in public
+[ivy:retrieve] 	found net.arnx#jsonic;1.3.10 in public
+[ivy:retrieve] 	found net.jthink#jaudiotagger;2.2.5 in public
+[ivy:retrieve] 	found net.sourceforge.jchardet#jchardet;1.0 in public
+[ivy:retrieve] 	found org.apache.commons#commons-collections4;4.4 in public
+[ivy:retrieve] 	found org.apache.commons#commons-compress;1.27.1 in public
+[ivy:retrieve] 	found commons-codec#commons-codec;1.17.1 in public
+[ivy:retrieve] 	found org.apache.commons#commons-lang3;3.16.0 in public
+[ivy:retrieve] 	found org.apache.calcite.avatica#avatica-core;1.13.0 in public
+[ivy:retrieve] 	found org.apache.calcite#calcite-core;1.18.0 in public
+[ivy:retrieve] 	found org.apache.calcite#calcite-linq4j;1.18.0 in public
+[ivy:retrieve] 	found org.apache.commons#commons-math3;3.6.1 in public
+[ivy:retrieve] 	found org.apache.httpcomponents#httpclient;4.5.12 in public
+[ivy:retrieve] 	found org.apache.httpcomponents#httpcore;4.4.13 in public
+[ivy:retrieve] 	found org.apache.httpcomponents#httpmime;4.5.12 in public
+[ivy:retrieve] 	found org.apache.james#apache-mime4j;0.6 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-analysis-common;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-core;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-backward-codecs;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-classification;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-queries;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-grouping;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-codecs;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-highlighter;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-memory;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-join;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-misc;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-queryparser;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-spatial-extras;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-suggest;9.0.0 in public
+[ivy:retrieve] 	found org.apache.pdfbox#pdfbox;3.0.3 in public
+[ivy:retrieve] 	found org.apache.pdfbox#pdfbox-io;3.0.3 in public
+[ivy:retrieve] 	found commons-logging#commons-logging;1.3.3 in public
+[ivy:retrieve] 	found org.apache.pdfbox#fontbox;3.0.3 in public
+[ivy:retrieve] 	found org.apache.poi#poi;5.3.0 in public
+[ivy:retrieve] 	found com.zaxxer#SparseBitSet;1.3 in public
+[ivy:retrieve] 	found org.apache.logging.log4j#log4j-api;2.23.1 in public
+[ivy:retrieve] 	found org.apache.poi#poi-scratchpad;5.3.0 in public
+[ivy:retrieve] 	found org.apache.solr#solr-core;9.0.0 in public
+[ivy:retrieve] 	found org.apache.solr#solr-scripting;9.0.0 in public
+[ivy:retrieve] 	found org.apache.solr#solr-solrj;9.0.0 in public
+[ivy:retrieve] 	found org.apache.zookeeper#zookeeper;3.6.2 in public
+[ivy:retrieve] 	found org.bitlet#weupnp;0.1.4 in public
+[ivy:retrieve] 	found org.bouncycastle#bcmail-jdk18on;1.79 in public
+[ivy:retrieve] 	found org.bouncycastle#bcprov-jdk18on;1.79 in public
+[ivy:retrieve] 	found org.bouncycastle#bcutil-jdk18on;1.79 in public
+[ivy:retrieve] 	found org.bouncycastle#bcpkix-jdk18on;1.79 in public
+[ivy:retrieve] 	found org.codehaus.woodstox#woodstox-core-asl;4.4.1 in public
+[ivy:retrieve] 	found org.codehaus.woodstox#stax2-api;3.1.4 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-client;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-http;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-util;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-io;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-deploy;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-jmx;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-proxy;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-security;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-server;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-servlets;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-continuation;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-servlet;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-webapp;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-xml;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty.http2#http2-client;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty.http2#http2-common;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty.http2#http2-http-client-transport;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.jsoup#jsoup;1.15.3 in public
+[ivy:retrieve] 	found org.jwat#jwat-warc;1.1.3 in public
+[ivy:retrieve] 	found org.jwat#jwat-common;1.1.3 in public
+[ivy:retrieve] 	found org.jwat#jwat-archive-common;1.1.3 in public
+[ivy:retrieve] 	found org.jwat#jwat-gzip;1.1.3 in public
+[ivy:retrieve] 	found org.locationtech.spatial4j#spatial4j;0.8 in public
+[ivy:retrieve] 	found org.rrd4j#rrd4j;3.2 in public
+[ivy:retrieve] 	found org.slf4j#jcl-over-slf4j;1.7.36 in public
+[ivy:retrieve] 	found org.slf4j#slf4j-api;1.7.36 in public
+[ivy:retrieve] 	found org.slf4j#log4j-over-slf4j;1.7.36 in public
+[ivy:retrieve] 	found org.slf4j#slf4j-jdk14;1.7.36 in public
+[ivy:retrieve] 	found org.tukaani#xz;1.8 in public
+[ivy:retrieve] 	found oro#oro;2.0.8 in public
+[ivy:retrieve] 	found com.github.luben#zstd-jni;1.5.5-6 in public
+[ivy:retrieve] 	found ai.djl#api;0.27.0 in public
+[ivy:retrieve] 	found com.google.code.gson#gson;2.10.1 in public
+[ivy:retrieve] 	found net.java.dev.jna#jna;5.14.0 in public
+[ivy:retrieve] :: resolution report :: resolve 2066ms :: artifacts dl 84ms
+[ivy:retrieve] 	:: evicted modules:
+[ivy:retrieve] 	commons-codec#commons-codec;1.15 by [commons-codec#commons-codec;1.17.1] in [compile]
+[ivy:retrieve] 	commons-logging#commons-logging;1.2 by [commons-logging#commons-logging;1.3.3] in [compile]
+[ivy:retrieve] 	org.slf4j#slf4j-api;1.7.22 by [org.slf4j#slf4j-api;1.7.36] in [compile]
+[ivy:retrieve] 	commons-io#commons-io;2.16.1 by [commons-io#commons-io;2.17.0] in [compile]
+[ivy:retrieve] 	org.apache.commons#commons-lang3;3.13.0 by [org.apache.commons#commons-lang3;3.16.0] in [compile]
+[ivy:retrieve] 	commons-codec#commons-codec;1.11 by [commons-codec#commons-codec;1.17.1] in [compile]
+[ivy:retrieve] 	commons-logging#commons-logging;1.1.1 by [commons-logging#commons-logging;1.2] in [compile]
+[ivy:retrieve] 	commons-codec#commons-codec;1.17.0 by [commons-codec#commons-codec;1.17.1] in [compile]
+[ivy:retrieve] 	javax.servlet#javax.servlet-api;3.1.0 by [javax.servlet#javax.servlet-api;4.0.1] in [compile]
+[ivy:retrieve] 	org.apache.commons#commons-compress;1.26.1 by [org.apache.commons#commons-compress;1.27.1] in [compile]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      compile     |  123  |   0   |   0   |   10  ||  113  |   0   |
+	---------------------------------------------------------------------
+[ivy:retrieve] :: retrieving :: net.yacy#search-server
+[ivy:retrieve] 	confs: [compile]
+[ivy:retrieve] 	113 artifacts copied, 0 already retrieved (90759kB/151ms)
+[ivy:retrieve] :: resolving dependencies :: net.yacy#search-server;working@Satellite-Pro-L850
+[ivy:retrieve] 	confs: [test]
+[ivy:retrieve] 	found junit#junit;4.13 in public
+[ivy:retrieve] 	found org.hamcrest#hamcrest;2.2 in public
+[ivy:retrieve] 	found org.hamcrest#hamcrest-core;2.2 in public
+[ivy:retrieve] 	found org.hamcrest#hamcrest-library;2.2 in public
+[ivy:retrieve] :: resolution report :: resolve 37ms :: artifacts dl 2ms
+[ivy:retrieve] 	:: evicted modules:
+[ivy:retrieve] 	org.hamcrest#hamcrest-core;1.3 by [org.hamcrest#hamcrest-core;2.2] in [test]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|       test       |   5   |   0   |   0   |   1   ||   4   |   0   |
+	---------------------------------------------------------------------
+[ivy:retrieve] :: retrieving :: net.yacy#search-server
+[ivy:retrieve] 	confs: [test]
+[ivy:retrieve] 	0 artifacts copied, 4 already retrieved (0kB/1ms)
+
+compile-core:
+     [echo] project.class.path: /mnt/cloudparty/smoking/yacy_search_server_universal/build/classes/java/main:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/J7Zip-modified-1.0.2.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/org.restlet.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/commons-math3-3.6.1.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/rrd4j-3.2.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/oro-2.0.8.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-suggest-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/httpmime-4.5.12.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/commons-codec-1.17.1.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/SparseBitSet-1.3.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/http2-common-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/pdfbox-3.0.3.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/bcpkix-jdk18on-1.79.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/commons-lang3-3.16.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jackson-databind-2.18.2.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/httpcore-4.4.13.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jwat-gzip-1.1.3.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/solr-scripting-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/commons-logging-1.3.3.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/error_prone_annotations-2.21.1.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/spatial4j-0.8.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/apache-mime4j-0.6.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/bcmail-jdk18on-1.79.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-grouping-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-codecs-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/common-lang-3.12.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/poi-scratchpad-5.3.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jaudiotagger-2.2.5.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/xmpcore-6.1.11.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/caffeine-3.1.8.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/gson-2.10.1.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-misc-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-backward-codecs-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/commons-io-2.17.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/pdfbox-io-3.0.3.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/metadata-extractor-2.19.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/httpclient-4.5.12.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-join-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/icu4j-76.1.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jackson-annotations-2.18.2.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-highlighter-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-deploy-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-xml-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/commons-lang-2.6.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/http2-client-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/commons-fileupload-1.4.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jna-5.14.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/commons-collections4-4.4.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/log4j-api-2.23.1.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-client-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-servlet-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/slf4j-api-1.7.36.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-spatial-extras-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/log4j-over-slf4j-1.7.36.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-queryparser-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/stax2-api-3.1.4.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/xz-1.8.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/poi-5.3.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/bcutil-jdk18on-1.79.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-io-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jcl-over-slf4j-1.7.36.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jwat-common-1.1.3.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-webapp-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/solr-solrj-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/solr-core-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-security-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/fontbox-3.0.3.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-servlets-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/http2-http-client-transport-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jsonic-1.3.10.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-server-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/imageio-metadata-3.12.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/checker-qual-3.37.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/javax.servlet-api-4.0.1.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/opentracing-noop-0.33.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/woodstox-core-asl-4.4.1.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jcifs-1.3.17.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-proxy-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/slf4j-jdk14-1.7.36.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/opentracing-api-0.33.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jwat-archive-common-1.1.3.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/imageio-bmp-3.12.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/calcite-core-1.18.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/avatica-core-1.13.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/metrics-jmx-4.1.5.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/imageio-tiff-3.12.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/calcite-linq4j-1.18.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-queries-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jwat-warc-1.1.3.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/guava-33.3.1-jre.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/weupnp-0.1.4.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jackson-core-2.18.2.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jchardet-1.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jsch-0.2.21.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/zookeeper-3.6.2.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/commons-compress-1.27.1.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-analysis-common-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/imageio-core-3.12.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-core-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/common-io-3.12.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jsoup-1.15.3.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-util-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/langdetect-1.1-20120112.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-http-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-continuation-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/api-0.27.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/common-image-3.12.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/failureaccess-1.0.2.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/metrics-core-3.2.2.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/opentracing-util-0.33.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/inetaddresslocator-2.18.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/jetty-jmx-9.4.56.v20240826.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-classification-9.0.0.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/zstd-jni-1.5.5-6.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/bcprov-jdk18on-1.79.jar:/mnt/cloudparty/smoking/yacy_search_server_universal/lib/lucene-memory-9.0.0.jar
+    [javac] Compiling 847 source files to /mnt/cloudparty/smoking/yacy_search_server_universal/build/classes/java/main
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:40: error: cannot find symbol
+    [javac] public final class CrawlStacker implements WorkflowTask<Request> {
+    [javac]                                            ^
+    [javac]   symbol: class WorkflowTask
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:40: error: cannot find symbol
+    [javac] public final class CrawlStacker implements WorkflowTask<Request> {
+    [javac]                                                         ^
+    [javac]   symbol: class Request
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:46: error: cannot find symbol
+    [javac]     private final RobotsTxt robots;
+    [javac]                   ^
+    [javac]   symbol:   class RobotsTxt
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:47: error: cannot find symbol
+    [javac]     private final WorkflowProcessor<Request> requestQueue;
+    [javac]                   ^
+    [javac]   symbol:   class WorkflowProcessor
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:47: error: cannot find symbol
+    [javac]     private final WorkflowProcessor<Request> requestQueue;
+    [javac]                                     ^
+    [javac]   symbol:   class Request
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:48: error: cannot find symbol
+    [javac]     private final CrawlQueues nextQueue;
+    [javac]                   ^
+    [javac]   symbol:   class CrawlQueues
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:53: error: cannot find symbol
+    [javac]             final RobotsTxt robots,
+    [javac]                   ^
+    [javac]   symbol:   class RobotsTxt
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:54: error: cannot find symbol
+    [javac]             final CrawlQueues cq,
+    [javac]                   ^
+    [javac]   symbol:   class CrawlQueues
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:56: error: cannot find symbol
+    [javac]             final WorkflowProcessor<Request> requestQueue) {
+    [javac]                   ^
+    [javac]   symbol:   class WorkflowProcessor
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:56: error: cannot find symbol
+    [javac]             final WorkflowProcessor<Request> requestQueue) {
+    [javac]                                     ^
+    [javac]   symbol:   class Request
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:79: error: cannot find symbol
+    [javac]     public void enqueueWithDelay(Request request, long delayInMillis) {
+    [javac]                                  ^
+    [javac]   symbol:   class Request
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:84: error: cannot find symbol
+    [javac]     public Request process(Request entry) {
+    [javac]                            ^
+    [javac]   symbol:   class Request
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:84: error: cannot find symbol
+    [javac]     public Request process(Request entry) {
+    [javac]            ^
+    [javac]   symbol:   class Request
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:100: error: cannot find symbol
+    [javac]     public void enqueueEntry(Request request) {
+    [javac]                              ^
+    [javac]   symbol:   class Request
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:108: error: cannot find symbol
+    [javac]     public String stackCrawl(Request entry) {
+    [javac]                              ^
+    [javac]   symbol:   class Request
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:116: error: cannot find symbol
+    [javac]             final List<AnchorURL> hyperlinks,
+    [javac]                        ^
+    [javac]   symbol:   class AnchorURL
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:16: error: cannot find symbol
+    [javac]     private final Request request;
+    [javac]                   ^
+    [javac]   symbol:   class Request
+    [javac]   location: class DelayedCrawlTask
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:19: error: cannot find symbol
+    [javac]     public DelayedCrawlTask(Request request, long delayInMillis) {
+    [javac]                             ^
+    [javac]   symbol:   class Request
+    [javac]   location: class DelayedCrawlTask
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:35: error: cannot find symbol
+    [javac]     public Request getRequest() {
+    [javac]            ^
+    [javac]   symbol:   class Request
+    [javac]   location: class DelayedCrawlTask
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:1015: error: constructor CrawlStacker in class CrawlStacker cannot be applied to given types;
+    [javac]                 new CrawlStacker(
+    [javac]                 ^
+    [javac]   required: RobotsTxt,CrawlQueues,CrawlSwitchboard,<any>
+    [javac]   found: RobotsTxt,CrawlQueues,CrawlSwitchboard,Segment,SeedDB,boolean,boolean,FilterEngine
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:1465: error: cannot find symbol
+    [javac]             this.crawlStacker.announceClose();
+    [javac]                              ^
+    [javac]   symbol:   method announceClose()
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:1466: error: cannot find symbol
+    [javac]             this.crawlStacker.close();
+    [javac]                              ^
+    [javac]   symbol:   method close()
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:1566: error: constructor CrawlStacker in class CrawlStacker cannot be applied to given types;
+    [javac]                             new CrawlStacker(
+    [javac]                             ^
+    [javac]   required: RobotsTxt,CrawlQueues,CrawlSwitchboard,<any>
+    [javac]   found: RobotsTxt,CrawlQueues,CrawlSwitchboard,Segment,SeedDB,boolean,boolean,FilterEngine
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:1985: error: cannot find symbol
+    [javac]                 (this.crawlStacker != null && !this.crawlStacker.isEmpty()) ||
+    [javac]                                                                 ^
+    [javac]   symbol:   method isEmpty()
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:2003: error: cannot find symbol
+    [javac]         this.crawlStacker.announceClose();
+    [javac]                          ^
+    [javac]   symbol:   method announceClose()
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:2004: error: cannot find symbol
+    [javac]         this.crawlStacker.close();
+    [javac]                          ^
+    [javac]   symbol:   method close()
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:2099: error: cannot find symbol
+    [javac]             noIndexReason = this.crawlStacker.urlInAcceptedDomain(response.url());
+    [javac]                                              ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:3023: error: cannot find symbol
+    [javac]                 final String rejectReason = this.crawlStacker.checkAcceptanceChangeable(doc.dc_source(), response.profile(), 1 /*depth is irrelevant here, we just make clear its not the start url*/);
+    [javac]                                                              ^
+    [javac]   symbol:   method checkAcceptanceChangeable(DigestURL,CrawlProfile,int)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:3029: error: nextQueue has private access in CrawlStacker
+    [javac]                         this.crawlStacker.nextQueue.errorURL.push(response.url(), response.depth(), response.profile(), FailCategory.FINAL_LOAD_CONTEXT, rejectReason, -1);
+    [javac]                                          ^
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:3700: error: cannot find symbol
+    [javac]                 this.crawlStacker.enqueueEntriesFTP(
+    [javac]                                  ^
+    [javac]   symbol:   method enqueueEntriesFTP(byte[],CrawlProfile,DigestURL,boolean,int)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:3805: error: cannot find symbol
+    [javac]             final String acceptedError = this.crawlStacker.checkAcceptanceChangeable(e.getValue(), profile, 0);
+    [javac]                                                           ^
+    [javac]   symbol:   method checkAcceptanceChangeable(DigestURL,CrawlProfile,int)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:3880: error: cannot find symbol
+    [javac]             String acceptedError = this.crawlStacker.checkAcceptanceChangeable(url, profile, 0);
+    [javac]                                                     ^
+    [javac]   symbol:   method checkAcceptanceChangeable(DigestURL,CrawlProfile,int)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:3881: error: cannot find symbol
+    [javac]             if (acceptedError == null) acceptedError = this.crawlStacker.checkAcceptanceInitially(url, profile);
+    [javac]                                                                         ^
+    [javac]   symbol:   method checkAcceptanceInitially(DigestURL,CrawlProfile)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/data/CrawlQueues.java:554: error: cannot find symbol
+    [javac]             final String urlRejectReason = this.sb.crawlStacker.urlInAcceptedDomain(url);
+    [javac]                                                                ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/data/CrawlQueues.java:630: error: cannot find symbol
+    [javac]                 final String urlRejectReason = this.sb.crawlStacker.urlInAcceptedDomain(url);
+    [javac]                                                                    ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:83: error: method does not override or implement a method from a supertype
+    [javac]     @Override
+    [javac]     ^
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:118: error: cannot find symbol
+    [javac]         for (final AnchorURL url : hyperlinks) {
+    [javac]                    ^
+    [javac]   symbol:   class AnchorURL
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:121: error: cannot find symbol
+    [javac]             enqueueEntry(new Request(
+    [javac]                              ^
+    [javac]   symbol:   class Request
+    [javac]   location: class CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/search/ResourceObserver.java:146: error: cannot find symbol
+    [javac]                     sb.crawlStacker.clear();
+    [javac]                                    ^
+    [javac]   symbol:   method clear()
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/CrawlStarterFromScraper.java:96: error: method enqueueEntries in class CrawlStacker cannot be applied to given types;
+    [javac] 			this.crawlStacker.enqueueEntries(this.initiatorHash, this.profile.handle(), urls, this.replace, this.profile.timezoneOffset());
+    [javac] 			                 ^
+    [javac]   required: byte[],String,List<AnchorURL>,boolean
+    [javac]   found: byte[],String,List<AnchorURL>,boolean,int
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/RecrawlBusyThread.java:218: error: cannot find symbol
+    [javac]                 String acceptedError = this.sb.crawlStacker.checkAcceptanceChangeable(url, profile, 0);
+    [javac]                                                            ^
+    [javac]   symbol:   method checkAcceptanceChangeable(DigestURL,CrawlProfile,int)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/crawler/RecrawlBusyThread.java:220: error: cannot find symbol
+    [javac]                     acceptedError = this.sb.crawlStacker.checkAcceptanceInitially(url, profile);
+    [javac]                                                         ^
+    [javac]   symbol:   method checkAcceptanceInitially(DigestURL,CrawlProfile)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/document/content/SurrogateReader.java:147: error: cannot find symbol
+    [javac]                                 final String urlRejectReason = this.crawlStacker.urlInAcceptedDomain(url);
+    [javac]                                                                                 ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/document/content/SurrogateReader.java:247: error: cannot find symbol
+    [javac]                 final String urlRejectReason = this.crawlStacker.urlInAcceptedDomain(this.dcEntry.getIdentifier(true));
+    [javac]                                                                 ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/htroot/Crawler_p.java:740: error: cannot find symbol
+    [javac]                                         sb.crawlStacker.enqueueEntriesAsynchronous(sb.peers.mySeed().hash.getBytes(), profile.handle(), hyperlinks_from_file, profile.timezoneOffset());
+    [javac]                                                        ^
+    [javac]   symbol:   method enqueueEntriesAsynchronous(byte[],String,List<AnchorURL>,int)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/htroot/IndexBrowser_p.java:176: error: cannot find symbol
+    [javac]             if (sb.crawlStacker.size() > 2) wait = false;
+    [javac]                                ^
+    [javac]   symbol:   method size()
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/htroot/IndexControlURLs_p.java:152: error: cannot find symbol
+    [javac]                 sb.crawlStacker.clear();
+    [javac]                                ^
+    [javac]   symbol:   method clear()
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/peers/Protocol.java:720: error: cannot find symbol
+    [javac]                 Switchboard.getSwitchboard().crawlStacker.urlInAcceptedDomain(urlEntry.url());
+    [javac]                                                          ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/peers/Protocol.java:1391: error: cannot find symbol
+    [javac]             final String urlRejectReason = Switchboard.getSwitchboard().crawlStacker.urlInAcceptedDomain(urlEntry.url());
+    [javac]                                                                                     ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/htroot/Status.java:359: error: cannot find symbol
+    [javac]         prop.putNum("stackCrawlQueueSize", sb.crawlStacker.size());
+    [javac]                                                           ^
+    [javac]   symbol:   method size()
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/htroot/rct_p.java:75: error: cannot find symbol
+    [javac]                         final String urlRejectReason = sb.crawlStacker.urlInAcceptedDomain(url);
+    [javac]                                                                       ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/htroot/yacy/crawlReceipt.java:133: error: cannot find symbol
+    [javac]         final String urlRejectReason = sb.crawlStacker.urlInAcceptedDomain(entry.url());
+    [javac]                                                       ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/htroot/yacy/transferRWI.java:217: error: cannot find symbol
+    [javac]                 final String urlRejectReason = sb.crawlStacker.urlInAcceptedDomainHash(urlHash);
+    [javac]                                                               ^
+    [javac]   symbol:   method urlInAcceptedDomainHash(byte[])
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/htroot/yacy/transferURL.java:138: error: cannot find symbol
+    [javac]                 final String urlRejectReason = sb.crawlStacker.urlInAcceptedDomain(lEntry.url());
+    [javac]                                                               ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/htroot/yacysearchitem.java:215: error: cannot find symbol
+    [javac]                         if (sb.crawlStacker.urlInAcceptedDomain(new DigestURL(resultUrlstring)) == null) {
+    [javac]                                            ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /mnt/cloudparty/smoking/yacy_search_server_universal/source/net/yacy/http/servlets/UrlProxyServlet.java:209: error: cannot find symbol
+    [javac]                             if (sb.crawlStacker.urlInAcceptedDomain(new DigestURL(absurl)) != null) {
+    [javac]                                                ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] 56 errors

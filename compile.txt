@@ -1,0 +1,321 @@
+Buildfile: /home/john/Downloads/yacy_search_server_universal/build.xml
+
+clean:
+
+init:
+     [echo] YaCy Version number: 1.940
+     [echo] GIT Release Date: 20250108
+     [echo] GIT Release Time: 1001
+     [echo] GIT Release Hash: ddac0dbfe
+     [copy] Copying 1 file to /home/john/Downloads/yacy_search_server_universal/defaults
+
+install-ivy:
+     [echo] downloading ivy (if not already there) to ${ify.download.file} ...
+      [get] Destination already exists (skipping): /home/john/Downloads/yacy_search_server_universal/ivy/ivy.jar
+     [echo] using ivy.jar.file: /home/john/Downloads/yacy_search_server_universal/ivy/ivy.jar
+
+resolve:
+[ivy:retrieve] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy/ ::
+[ivy:retrieve] :: loading settings :: url = jar:file:/home/john/Downloads/yacy_search_server_universal/ivy/ivy.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[ivy:retrieve] :: resolving dependencies :: net.yacy#search-server;working@ML110-Gen9
+[ivy:retrieve] 	confs: [compile]
+[ivy:retrieve] 	found commons-fileupload#commons-fileupload;1.4 in public
+[ivy:retrieve] 	found commons-lang#commons-lang;2.6 in public
+[ivy:retrieve] 	found com.cybozu.labs#langdetect;1.1-20120112 in public
+[ivy:retrieve] 	found com.drewnoakes#metadata-extractor;2.19.0 in public
+[ivy:retrieve] 	found com.adobe.xmp#xmpcore;6.1.11 in public
+[ivy:retrieve] 	found com.fasterxml.jackson.core#jackson-databind;2.18.2 in public
+[ivy:retrieve] 	found com.fasterxml.jackson.core#jackson-annotations;2.18.2 in public
+[ivy:retrieve] 	found com.fasterxml.jackson.core#jackson-core;2.18.2 in public
+[ivy:retrieve] 	found com.github.ben-manes.caffeine#caffeine;3.1.8 in public
+[ivy:retrieve] 	found org.checkerframework#checker-qual;3.37.0 in public
+[ivy:retrieve] 	found com.google.errorprone#error_prone_annotations;2.21.1 in public
+[ivy:retrieve] 	found com.google.guava#guava;33.3.1-jre in public
+[ivy:retrieve] 	found com.google.guava#failureaccess;1.0.2 in public
+[ivy:retrieve] 	found com.ibm.icu#icu4j;76.1 in public
+[ivy:retrieve] 	found com.github.mwiede#jsch;0.2.21 in public
+[ivy:retrieve] 	found com.twelvemonkeys.imageio#imageio-core;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.common#common-lang;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.common#common-io;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.common#common-image;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.imageio#imageio-bmp;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.imageio#imageio-tiff;3.12.0 in public
+[ivy:retrieve] 	found com.twelvemonkeys.imageio#imageio-metadata;3.12.0 in public
+[ivy:retrieve] 	found commons-codec#commons-codec;1.15 in public
+[ivy:retrieve] 	found commons-io#commons-io;2.17.0 in public
+[ivy:retrieve] 	found commons-logging#commons-logging;1.2 in public
+[ivy:retrieve] 	found io.dropwizard.metrics#metrics-core;3.2.2 in public
+[ivy:retrieve] 	found org.slf4j#slf4j-api;1.7.22 in public
+[ivy:retrieve] 	found io.dropwizard.metrics#metrics-jmx;4.1.5 in public
+[ivy:retrieve] 	found io.opentracing#opentracing-noop;0.33.0 in public
+[ivy:retrieve] 	found io.opentracing#opentracing-api;0.33.0 in public
+[ivy:retrieve] 	found io.opentracing#opentracing-util;0.33.0 in public
+[ivy:retrieve] 	found javax.servlet#javax.servlet-api;4.0.1 in public
+[ivy:retrieve] 	found javainetlocator#inetaddresslocator;2.18 in public
+[ivy:retrieve] 	found jcifs#jcifs;1.3.17 in public
+[ivy:retrieve] 	found net.arnx#jsonic;1.3.10 in public
+[ivy:retrieve] 	found net.jthink#jaudiotagger;2.2.5 in public
+[ivy:retrieve] 	found net.sourceforge.jchardet#jchardet;1.0 in public
+[ivy:retrieve] 	found org.apache.commons#commons-collections4;4.4 in public
+[ivy:retrieve] 	found org.apache.commons#commons-compress;1.27.1 in public
+[ivy:retrieve] 	found commons-codec#commons-codec;1.17.1 in public
+[ivy:retrieve] 	found org.apache.commons#commons-lang3;3.16.0 in public
+[ivy:retrieve] 	found org.apache.calcite.avatica#avatica-core;1.13.0 in public
+[ivy:retrieve] 	found org.apache.calcite#calcite-core;1.18.0 in public
+[ivy:retrieve] 	found org.apache.calcite#calcite-linq4j;1.18.0 in public
+[ivy:retrieve] 	found org.apache.commons#commons-math3;3.6.1 in public
+[ivy:retrieve] 	found org.apache.httpcomponents#httpclient;4.5.12 in public
+[ivy:retrieve] 	found org.apache.httpcomponents#httpcore;4.4.13 in public
+[ivy:retrieve] 	found org.apache.httpcomponents#httpmime;4.5.12 in public
+[ivy:retrieve] 	found org.apache.james#apache-mime4j;0.6 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-analysis-common;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-core;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-backward-codecs;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-classification;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-queries;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-grouping;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-codecs;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-highlighter;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-memory;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-join;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-misc;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-queryparser;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-spatial-extras;9.0.0 in public
+[ivy:retrieve] 	found org.apache.lucene#lucene-suggest;9.0.0 in public
+[ivy:retrieve] 	found org.apache.pdfbox#pdfbox;3.0.3 in public
+[ivy:retrieve] 	found org.apache.pdfbox#pdfbox-io;3.0.3 in public
+[ivy:retrieve] 	found commons-logging#commons-logging;1.3.3 in public
+[ivy:retrieve] 	found org.apache.pdfbox#fontbox;3.0.3 in public
+[ivy:retrieve] 	found org.apache.poi#poi;5.3.0 in public
+[ivy:retrieve] 	found com.zaxxer#SparseBitSet;1.3 in public
+[ivy:retrieve] 	found org.apache.logging.log4j#log4j-api;2.23.1 in public
+[ivy:retrieve] 	found org.apache.poi#poi-scratchpad;5.3.0 in public
+[ivy:retrieve] 	found org.apache.solr#solr-core;9.0.0 in public
+[ivy:retrieve] 	found org.apache.solr#solr-scripting;9.0.0 in public
+[ivy:retrieve] 	found org.apache.solr#solr-solrj;9.0.0 in public
+[ivy:retrieve] 	found org.apache.zookeeper#zookeeper;3.6.2 in public
+[ivy:retrieve] 	found org.bitlet#weupnp;0.1.4 in public
+[ivy:retrieve] 	found org.bouncycastle#bcmail-jdk18on;1.79 in public
+[ivy:retrieve] 	found org.bouncycastle#bcprov-jdk18on;1.79 in public
+[ivy:retrieve] 	found org.bouncycastle#bcutil-jdk18on;1.79 in public
+[ivy:retrieve] 	found org.bouncycastle#bcpkix-jdk18on;1.79 in public
+[ivy:retrieve] 	found org.codehaus.woodstox#woodstox-core-asl;4.4.1 in public
+[ivy:retrieve] 	found org.codehaus.woodstox#stax2-api;3.1.4 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-client;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-http;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-util;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-io;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-deploy;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-jmx;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-proxy;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-security;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-server;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-servlets;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-continuation;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-servlet;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-webapp;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty#jetty-xml;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty.http2#http2-client;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty.http2#http2-common;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.eclipse.jetty.http2#http2-http-client-transport;9.4.56.v20240826 in public
+[ivy:retrieve] 	found org.jsoup#jsoup;1.15.3 in public
+[ivy:retrieve] 	found org.jwat#jwat-warc;1.1.3 in public
+[ivy:retrieve] 	found org.jwat#jwat-common;1.1.3 in public
+[ivy:retrieve] 	found org.jwat#jwat-archive-common;1.1.3 in public
+[ivy:retrieve] 	found org.jwat#jwat-gzip;1.1.3 in public
+[ivy:retrieve] 	found org.locationtech.spatial4j#spatial4j;0.8 in public
+[ivy:retrieve] 	found org.rrd4j#rrd4j;3.2 in public
+[ivy:retrieve] 	found org.slf4j#jcl-over-slf4j;1.7.36 in public
+[ivy:retrieve] 	found org.slf4j#slf4j-api;1.7.36 in public
+[ivy:retrieve] 	found org.slf4j#log4j-over-slf4j;1.7.36 in public
+[ivy:retrieve] 	found org.slf4j#slf4j-jdk14;1.7.36 in public
+[ivy:retrieve] 	found org.tukaani#xz;1.8 in public
+[ivy:retrieve] 	found oro#oro;2.0.8 in public
+[ivy:retrieve] 	found com.github.luben#zstd-jni;1.5.5-6 in public
+[ivy:retrieve] 	found ai.djl#api;0.27.0 in public
+[ivy:retrieve] 	found com.google.code.gson#gson;2.10.1 in public
+[ivy:retrieve] 	found net.java.dev.jna#jna;5.14.0 in public
+[ivy:retrieve] :: resolution report :: resolve 1515ms :: artifacts dl 51ms
+[ivy:retrieve] 	:: evicted modules:
+[ivy:retrieve] 	commons-codec#commons-codec;1.15 by [commons-codec#commons-codec;1.17.1] in [compile]
+[ivy:retrieve] 	commons-logging#commons-logging;1.2 by [commons-logging#commons-logging;1.3.3] in [compile]
+[ivy:retrieve] 	org.slf4j#slf4j-api;1.7.22 by [org.slf4j#slf4j-api;1.7.36] in [compile]
+[ivy:retrieve] 	commons-io#commons-io;2.16.1 by [commons-io#commons-io;2.17.0] in [compile]
+[ivy:retrieve] 	org.apache.commons#commons-lang3;3.13.0 by [org.apache.commons#commons-lang3;3.16.0] in [compile]
+[ivy:retrieve] 	commons-codec#commons-codec;1.11 by [commons-codec#commons-codec;1.17.1] in [compile]
+[ivy:retrieve] 	commons-logging#commons-logging;1.1.1 by [commons-logging#commons-logging;1.2] in [compile]
+[ivy:retrieve] 	commons-codec#commons-codec;1.17.0 by [commons-codec#commons-codec;1.17.1] in [compile]
+[ivy:retrieve] 	javax.servlet#javax.servlet-api;3.1.0 by [javax.servlet#javax.servlet-api;4.0.1] in [compile]
+[ivy:retrieve] 	org.apache.commons#commons-compress;1.26.1 by [org.apache.commons#commons-compress;1.27.1] in [compile]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      compile     |  123  |   0   |   0   |   10  ||  113  |   0   |
+	---------------------------------------------------------------------
+[ivy:retrieve] :: retrieving :: net.yacy#search-server
+[ivy:retrieve] 	confs: [compile]
+[ivy:retrieve] 	113 artifacts copied, 0 already retrieved (90759kB/130ms)
+[ivy:retrieve] :: resolving dependencies :: net.yacy#search-server;working@ML110-Gen9
+[ivy:retrieve] 	confs: [test]
+[ivy:retrieve] 	found junit#junit;4.13 in public
+[ivy:retrieve] 	found org.hamcrest#hamcrest;2.2 in public
+[ivy:retrieve] 	found org.hamcrest#hamcrest-core;2.2 in public
+[ivy:retrieve] 	found org.hamcrest#hamcrest-library;2.2 in public
+[ivy:retrieve] :: resolution report :: resolve 35ms :: artifacts dl 2ms
+[ivy:retrieve] 	:: evicted modules:
+[ivy:retrieve] 	org.hamcrest#hamcrest-core;1.3 by [org.hamcrest#hamcrest-core;2.2] in [test]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|       test       |   5   |   0   |   0   |   1   ||   4   |   0   |
+	---------------------------------------------------------------------
+[ivy:retrieve] :: retrieving :: net.yacy#search-server
+[ivy:retrieve] 	confs: [test]
+[ivy:retrieve] 	0 artifacts copied, 4 already retrieved (0kB/2ms)
+
+compile-core:
+     [echo] project.class.path: /home/john/Downloads/yacy_search_server_universal/build/classes/java/main:/home/john/Downloads/yacy_search_server_universal/lib/J7Zip-modified-1.0.2.jar:/home/john/Downloads/yacy_search_server_universal/lib/org.restlet.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-io-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-grouping-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/commons-math3-3.6.1.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-http-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/imageio-metadata-3.12.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/poi-scratchpad-5.3.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/pdfbox-3.0.3.jar:/home/john/Downloads/yacy_search_server_universal/lib/httpcore-4.4.13.jar:/home/john/Downloads/yacy_search_server_universal/lib/opentracing-api-0.33.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-classification-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/xmpcore-6.1.11.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-backward-codecs-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/javax.servlet-api-4.0.1.jar:/home/john/Downloads/yacy_search_server_universal/lib/caffeine-3.1.8.jar:/home/john/Downloads/yacy_search_server_universal/lib/langdetect-1.1-20120112.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-join-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/failureaccess-1.0.2.jar:/home/john/Downloads/yacy_search_server_universal/lib/spatial4j-0.8.jar:/home/john/Downloads/yacy_search_server_universal/lib/jwat-archive-common-1.1.3.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-server-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/commons-collections4-4.4.jar:/home/john/Downloads/yacy_search_server_universal/lib/icu4j-76.1.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-webapp-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/commons-io-2.17.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/calcite-linq4j-1.18.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/bcpkix-jdk18on-1.79.jar:/home/john/Downloads/yacy_search_server_universal/lib/poi-5.3.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/api-0.27.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/jwat-common-1.1.3.jar:/home/john/Downloads/yacy_search_server_universal/lib/imageio-core-3.12.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/gson-2.10.1.jar:/home/john/Downloads/yacy_search_server_universal/lib/bcmail-jdk18on-1.79.jar:/home/john/Downloads/yacy_search_server_universal/lib/http2-http-client-transport-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/jackson-annotations-2.18.2.jar:/home/john/Downloads/yacy_search_server_universal/lib/avatica-core-1.13.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/slf4j-api-1.7.36.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-codecs-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/commons-fileupload-1.4.jar:/home/john/Downloads/yacy_search_server_universal/lib/error_prone_annotations-2.21.1.jar:/home/john/Downloads/yacy_search_server_universal/lib/log4j-api-2.23.1.jar:/home/john/Downloads/yacy_search_server_universal/lib/zookeeper-3.6.2.jar:/home/john/Downloads/yacy_search_server_universal/lib/xz-1.8.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-client-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-spatial-extras-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-queries-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-deploy-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/jwat-warc-1.1.3.jar:/home/john/Downloads/yacy_search_server_universal/lib/commons-lang-2.6.jar:/home/john/Downloads/yacy_search_server_universal/lib/httpmime-4.5.12.jar:/home/john/Downloads/yacy_search_server_universal/lib/commons-lang3-3.16.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-proxy-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/oro-2.0.8.jar:/home/john/Downloads/yacy_search_server_universal/lib/log4j-over-slf4j-1.7.36.jar:/home/john/Downloads/yacy_search_server_universal/lib/httpclient-4.5.12.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-jmx-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-servlet-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/bcutil-jdk18on-1.79.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-misc-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/bcprov-jdk18on-1.79.jar:/home/john/Downloads/yacy_search_server_universal/lib/stax2-api-3.1.4.jar:/home/john/Downloads/yacy_search_server_universal/lib/rrd4j-3.2.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-xml-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-security-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/solr-core-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/pdfbox-io-3.0.3.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-queryparser-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/jcl-over-slf4j-1.7.36.jar:/home/john/Downloads/yacy_search_server_universal/lib/guava-33.3.1-jre.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-memory-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/common-image-3.12.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-highlighter-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/commons-compress-1.27.1.jar:/home/john/Downloads/yacy_search_server_universal/lib/calcite-core-1.18.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-analysis-common-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/weupnp-0.1.4.jar:/home/john/Downloads/yacy_search_server_universal/lib/jsonic-1.3.10.jar:/home/john/Downloads/yacy_search_server_universal/lib/SparseBitSet-1.3.jar:/home/john/Downloads/yacy_search_server_universal/lib/fontbox-3.0.3.jar:/home/john/Downloads/yacy_search_server_universal/lib/http2-client-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/jcifs-1.3.17.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-util-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-continuation-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/metrics-core-3.2.2.jar:/home/john/Downloads/yacy_search_server_universal/lib/jackson-core-2.18.2.jar:/home/john/Downloads/yacy_search_server_universal/lib/http2-common-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/woodstox-core-asl-4.4.1.jar:/home/john/Downloads/yacy_search_server_universal/lib/imageio-bmp-3.12.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/commons-codec-1.17.1.jar:/home/john/Downloads/yacy_search_server_universal/lib/zstd-jni-1.5.5-6.jar:/home/john/Downloads/yacy_search_server_universal/lib/jsch-0.2.21.jar:/home/john/Downloads/yacy_search_server_universal/lib/jsoup-1.15.3.jar:/home/john/Downloads/yacy_search_server_universal/lib/solr-solrj-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/commons-logging-1.3.3.jar:/home/john/Downloads/yacy_search_server_universal/lib/solr-scripting-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/metrics-jmx-4.1.5.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-suggest-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/opentracing-noop-0.33.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/imageio-tiff-3.12.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/apache-mime4j-0.6.jar:/home/john/Downloads/yacy_search_server_universal/lib/jackson-databind-2.18.2.jar:/home/john/Downloads/yacy_search_server_universal/lib/jetty-servlets-9.4.56.v20240826.jar:/home/john/Downloads/yacy_search_server_universal/lib/jaudiotagger-2.2.5.jar:/home/john/Downloads/yacy_search_server_universal/lib/common-lang-3.12.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/checker-qual-3.37.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/jna-5.14.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/lucene-core-9.0.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/opentracing-util-0.33.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/common-io-3.12.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/jwat-gzip-1.1.3.jar:/home/john/Downloads/yacy_search_server_universal/lib/slf4j-jdk14-1.7.36.jar:/home/john/Downloads/yacy_search_server_universal/lib/jchardet-1.0.jar:/home/john/Downloads/yacy_search_server_universal/lib/inetaddresslocator-2.18.jar:/home/john/Downloads/yacy_search_server_universal/lib/metadata-extractor-2.19.0.jar
+    [javac] Compiling 847 source files to /home/john/Downloads/yacy_search_server_universal/build/classes/java/main
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:63: error: cannot find symbol
+    [javac]     private final RobotsTxt robots;
+    [javac]                   ^
+    [javac]   symbol:   class RobotsTxt
+    [javac]   location: class CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:73: error: cannot find symbol
+    [javac]             final RobotsTxt robots,
+    [javac]                   ^
+    [javac]   symbol:   class RobotsTxt
+    [javac]   location: class CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:1015: error: constructor CrawlStacker in class CrawlStacker cannot be applied to given types;
+    [javac]                 new CrawlStacker(
+    [javac]                 ^
+    [javac]   required: RobotsTxt,CrawlQueues,CrawlSwitchboard,Segment,boolean,boolean,FilterEngine
+    [javac]   found: RobotsTxt,CrawlQueues,CrawlSwitchboard,Segment,SeedDB,boolean,boolean,FilterEngine
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:1566: error: constructor CrawlStacker in class CrawlStacker cannot be applied to given types;
+    [javac]                             new CrawlStacker(
+    [javac]                             ^
+    [javac]   required: RobotsTxt,CrawlQueues,CrawlSwitchboard,Segment,boolean,boolean,FilterEngine
+    [javac]   found: RobotsTxt,CrawlQueues,CrawlSwitchboard,Segment,SeedDB,boolean,boolean,FilterEngine
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:2099: error: cannot find symbol
+    [javac]             noIndexReason = this.crawlStacker.urlInAcceptedDomain(response.url());
+    [javac]                                              ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:3028: error: cannot find symbol
+    [javac]                     if (rejectReason != null && !rejectReason.startsWith(CrawlStacker.CRAWL_REJECT_REASON_DOUBLE_IN_PREFIX)) {
+    [javac]                                                                                      ^
+    [javac]   symbol:   variable CRAWL_REJECT_REASON_DOUBLE_IN_PREFIX
+    [javac]   location: class CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/search/Switchboard.java:3700: error: cannot find symbol
+    [javac]                 this.crawlStacker.enqueueEntriesFTP(
+    [javac]                                  ^
+    [javac]   symbol:   method enqueueEntriesFTP(byte[],CrawlProfile,DigestURL,boolean,int)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/crawler/data/CrawlQueues.java:554: error: cannot find symbol
+    [javac]             final String urlRejectReason = this.sb.crawlStacker.urlInAcceptedDomain(url);
+    [javac]                                                                ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/crawler/data/CrawlQueues.java:630: error: cannot find symbol
+    [javac]                 final String urlRejectReason = this.sb.crawlStacker.urlInAcceptedDomain(url);
+    [javac]                                                                    ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:118: error: cannot find symbol
+    [javac]                 CrawlStacker.log.error("Interrupted during shutdown", e);
+    [javac]                                 ^
+    [javac]   symbol:   method error(String,InterruptedException)
+    [javac]   location: variable log of type ConcurrentLog
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:158: error: cannot find symbol
+    [javac]             log.error("Failed to enqueue entry: " + entry.url(), e);
+    [javac]                ^
+    [javac]   symbol:   method error(String,Exception)
+    [javac]   location: variable log of type ConcurrentLog
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:167: error: cannot find symbol
+    [javac]         CrawlProfile profile = this.crawler.get(UTF8.getBytes(profileHandle));
+    [javac]                                                 ^
+    [javac]   symbol:   variable UTF8
+    [javac]   location: class CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:180: error: cannot find symbol
+    [javac]         CrawlProfile profile = this.crawler.get(UTF8.getBytes(entry.profileHandle()));
+    [javac]                                                 ^
+    [javac]   symbol:   variable UTF8
+    [javac]   location: class CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/crawler/CrawlStacker.java:191: error: package NoticedURL does not exist
+    [javac]         this.nextQueue.noticeURL.push(NoticedURL.StackType.LOCAL, entry, profile, this.robots);
+    [javac]                                                 ^
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/document/content/SurrogateReader.java:147: error: cannot find symbol
+    [javac]                                 final String urlRejectReason = this.crawlStacker.urlInAcceptedDomain(url);
+    [javac]                                                                                 ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/document/content/SurrogateReader.java:247: error: cannot find symbol
+    [javac]                 final String urlRejectReason = this.crawlStacker.urlInAcceptedDomain(this.dcEntry.getIdentifier(true));
+    [javac]                                                                 ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/htroot/IndexCreateParserErrors_p.java:92: error: cannot find symbol
+    [javac]                 } else if (cause.startsWith(CrawlStacker.ERROR_NO_MATCH_MUST_MATCH_FILTER)) {
+    [javac]                                                         ^
+    [javac]   symbol:   variable ERROR_NO_MATCH_MUST_MATCH_FILTER
+    [javac]   location: class CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/htroot/IndexCreateParserErrors_p.java:94: error: cannot find symbol
+    [javac]                             "&regex=" + cause.substring(CrawlStacker.ERROR_NO_MATCH_MUST_MATCH_FILTER.length()) + "\">test</a>) " + cause);
+    [javac]                                                                     ^
+    [javac]   symbol:   variable ERROR_NO_MATCH_MUST_MATCH_FILTER
+    [javac]   location: class CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/htroot/IndexCreateParserErrors_p.java:95: error: cannot find symbol
+    [javac]                 } else if (cause.startsWith(CrawlStacker.ERROR_MATCH_WITH_MUST_NOT_MATCH_FILTER)) {
+    [javac]                                                         ^
+    [javac]   symbol:   variable ERROR_MATCH_WITH_MUST_NOT_MATCH_FILTER
+    [javac]   location: class CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/htroot/IndexCreateParserErrors_p.java:97: error: cannot find symbol
+    [javac]                             "&regex=" + cause.substring(CrawlStacker.ERROR_MATCH_WITH_MUST_NOT_MATCH_FILTER.length()) + "\">test</a>) " + cause);
+    [javac]                                                                     ^
+    [javac]   symbol:   variable ERROR_MATCH_WITH_MUST_NOT_MATCH_FILTER
+    [javac]   location: class CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/peers/Protocol.java:720: error: cannot find symbol
+    [javac]                 Switchboard.getSwitchboard().crawlStacker.urlInAcceptedDomain(urlEntry.url());
+    [javac]                                                          ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/peers/Protocol.java:1391: error: cannot find symbol
+    [javac]             final String urlRejectReason = Switchboard.getSwitchboard().crawlStacker.urlInAcceptedDomain(urlEntry.url());
+    [javac]                                                                                     ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/htroot/rct_p.java:75: error: cannot find symbol
+    [javac]                         final String urlRejectReason = sb.crawlStacker.urlInAcceptedDomain(url);
+    [javac]                                                                       ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/htroot/yacy/crawlReceipt.java:133: error: cannot find symbol
+    [javac]         final String urlRejectReason = sb.crawlStacker.urlInAcceptedDomain(entry.url());
+    [javac]                                                       ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/htroot/yacy/transferRWI.java:217: error: cannot find symbol
+    [javac]                 final String urlRejectReason = sb.crawlStacker.urlInAcceptedDomainHash(urlHash);
+    [javac]                                                               ^
+    [javac]   symbol:   method urlInAcceptedDomainHash(byte[])
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/htroot/yacy/transferURL.java:138: error: cannot find symbol
+    [javac]                 final String urlRejectReason = sb.crawlStacker.urlInAcceptedDomain(lEntry.url());
+    [javac]                                                               ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/htroot/yacysearchitem.java:215: error: cannot find symbol
+    [javac]                         if (sb.crawlStacker.urlInAcceptedDomain(new DigestURL(resultUrlstring)) == null) {
+    [javac]                                            ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] /home/john/Downloads/yacy_search_server_universal/source/net/yacy/http/servlets/UrlProxyServlet.java:209: error: cannot find symbol
+    [javac]                             if (sb.crawlStacker.urlInAcceptedDomain(new DigestURL(absurl)) != null) {
+    [javac]                                                ^
+    [javac]   symbol:   method urlInAcceptedDomain(DigestURL)
+    [javac]   location: variable crawlStacker of type CrawlStacker
+    [javac] 28 errors
